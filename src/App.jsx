@@ -3,10 +3,11 @@ import { products } from "./data"
 
 export default function App(){
   return (
-    <section style={{ backgroundColor: "#eee" }}>
+    <section>
       <div className="container py-5">
         {products.map((product,index) => {
           return <Product key={index}
+              id={product.id}
               productImage= {product.productImage}
               productName= {product.productName}
               rating= {product.rating}

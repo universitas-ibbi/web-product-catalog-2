@@ -1,5 +1,6 @@
 export const products = [
     {
+        id: 1,
         productImage: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp",
         productName:"Quant trident shirts",
         rating: 5,
@@ -11,6 +12,7 @@ export const products = [
         freeShipping: true
     },
     {
+        id: 2,
         productImage: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/new/img(4).webp",
         productName:"Quant olap shirts",
         rating: 2,
@@ -22,6 +24,7 @@ export const products = [
         freeShipping: false
     },
     {
+        id: 3,
         productImage: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/new/img(5).webp",
         productName:"Quant ruybi shirts",
         rating: 3,

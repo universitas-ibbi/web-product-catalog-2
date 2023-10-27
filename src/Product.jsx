@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom'
+import Star from './Star.jsx'
+import Shipping from './Shipping.jsx'
+
 export default function Product(props){
     return (
         <div className="row justify-content-center mb-3">
@@ -47,7 +51,8 @@ export default function Product(props){
                     </div>
                     <Shipping freeShipping={props.freeShipping} />
                     <div className="d-flex flex-column mt-4">
-                      <button className="btn btn-primary btn-sm" type="button">Details</button>
+                      {/* <button className="btn btn-primary btn-sm" type="button">Details</button> */}
+                      <Link to={`product/${props.id}`} className='btn btn-primary btn-sm'>Details</Link>
                       <button className="btn btn-outline-primary btn-sm mt-2" type="button">
                         Add to wishlist
                       </button>
@@ -61,18 +66,4 @@ export default function Product(props){
     )
 }
 
-function Star(props){
-    return (
-        <div className="text-danger mb-1 me-2">
-            {[...Array(5)].map((star,index) => {
-                return (
-                    <i key={index} className={index <= props.rating?"fa fa-star":"far fa-star"}></i>
-                )
-            })}
-        </div>
-    )
-}
 
-function Shipping(props){
-    return <h6 className={props.freeShipping?"text-success":"text-danger"}>{props.freeShipping?"Free Shipping":"No Free Shipping"}</h6>
-}
